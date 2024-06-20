@@ -1,0 +1,500 @@
+﻿@{
+    ViewData["Title"] = "Suppiler";
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Document Title, Description, and Author -->
+    <title>Console - Free Bootstrap Admin Template</title>
+    <meta name="description" content="Console is a Free Bootstrap Admin Template.">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/png" sizes="512x512" href="~/assets/favicon/favicon-512x512.png">
+
+    <!-- Google Fonts Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="~/assets/css/console-analytics-bsb.css">
+    <link href="/lib/layui/css/layui.css" rel="stylesheet">
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <!-- BSB Head -->
+    <style>
+
+        .card {
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .table-responsive {
+            margin-top: 20px;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: #ffffff;
+        }
+
+            .table th,
+            .table td {
+                padding: 0.75rem;
+                vertical-align: top;
+                border-top: 1px solid #dee2e6;
+            }
+
+            .table thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid #dee2e6;
+                background-color: #f2f2f2;
+            }
+
+            .table tbody + tbody {
+                border-top: 2px solid #dee2e6;
+            }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .table-bordered {
+            border: 1px solid #dee2e6;
+        }
+
+            .table-bordered th,
+            .table-bordered td {
+                border: 1px solid #dee2e6;
+            }
+
+            .table-bordered thead th,
+            .table-bordered thead td {
+                border-bottom-width: 2px;
+            }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+    <!-- BSB Head -->
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="bg-white border-bottom border-light-subtle sticky-top bsb-tpl-header-sticky">
+        <nav class="navbar navbar-expand-md bsb-navbar-3 bsb-tpl-navbar-sticky" data-bsb-sticky-target="#header">
+            <div class="container">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#!" data-bs-toggle="offcanvas" data-bs-target="#bsbSidebar1" aria-controls="bsbSidebar1">
+                            <i class="bi-filter-left fs-3 lh-1"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="index">
+                    <img src="~/images/Cust.png" class="bsb-tpl-logo" alt="Logo">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#bsbNavbar" aria-controls="bsbNavbar" aria-label="Toggle Navigation">
+                    <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="bsbNavbar">
+                    <ul class="navbar-nav bsb-dropdown-menu-responsive ms-auto align-items-center">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="~/assets/img/profile/profile-img-1.jpg" width="35" height="35" class="img-fluid rounded-circle" alt="Ethan Leo">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-md-end bsb-dropdown-animation bsb-fadeIn">
+                                <li>
+                                    <h6 class="dropdown-header fs-7 text-center">Welcome, @ViewBag.Username!</h6>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-center" href="profile">
+                                        <span>
+                                            <i class="bi bi-person-fill me-2"></i>
+                                            <span class="fs-7">View Profile</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-center" href="/Account/Login">
+                                        <span>
+                                            <span class="fs-7">Log Out</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="main">
+
+
+
+        <!-- Section - Bootstrap Brain Component -->
+        <!-- Breadcrumb -->
+        <section class="py-3 py-md-4 py-xl-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="h4">Pending Payment</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0 fs-7">
+                                <li class="breadcrumb-item"><a class="link-primary text-decoration-none" href="index">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="padding: 16px;" class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <form class="container" method="POST" action="@Url.Action("SearchPendingPOrder", "Customer")">
+                            <div class="layui-col-md4">
+                                <div class="layui-input-wrap">
+                                    <input type="text" name="searchText" value="" placeholder="Integrated Query" class="layui-input" lay-affix="clear">
+                                </div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <button class="layui-btn" type="submit" lay-submit lay-filter="search">Search</button>
+                            </div>
+                        </form>
+
+                        <button id="deleteSelected" class="layui-btn">Delete Orders</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <table id="zero_config" class="table table-striped table-bordered container">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll" /></th>
+                        <th>Oid</th>
+                        <th>Mid</th>
+                        <th>Sid</th>
+                        <th>Mname</th>
+                        <th>Number</th>
+                        <th>Time</th>
+                        <th>Price</th>
+                        <th>State</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model)
+                    {
+                        <tr>
+                            <td><input type="checkbox" class="deleteCheckbox" data-id="@order.Oid" /></td>
+                            <td>@order.Oid</td>
+                            <td>@order.Mid</td>
+                            <td>@order.Sid</td>
+                            <td>@order.Mname</td>
+                            <td>@order.Number</td>
+                            <td>@order.Time</td>
+                            <td>@order.Price</td>
+                            <td>@order.State</td>
+                            <td>
+                                <button class="btn btn-primary editButton"
+                                        data-oid="@order.Oid"
+                                        data-cid="@order.Cid"
+                                        data-mid="@order.Mid" 
+                                        data-sid="@order.Sid"
+                                        data-mname="@order.Mname"
+                                       data-number="@order.Number" 
+                                       data-time="@order.Time"
+                                       data-price="@order.Price"
+                                       data-province="@order.Province"
+                                       data-city="@order.City"
+                                       data-district="@order.District"
+                                        data-detailedaddress="@order.DetailedAddress"
+                                       data-state="@order.State">
+                                    Pay
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+
+            </table>
+        </section>
+
+        <!-- Edit Modal -->
+        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel">Buy Medicine</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editForm" action='@Url.Action("PayRequest", "Customer")' method="post">
+                            <div class="form-group">
+                                <label for="editOid">Oid</label>
+                                <input type="text" class="form-control" id="editOid" name="Oid" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editCid">Cid</label>
+                                <input type="text" class="form-control" id="editCid" name="Cid" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editMid">Mid</label>
+                                <input type="text" class="form-control" id="editMid" name="Mid" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editSid">Sid</label>
+                                <input type="text" class="form-control" id="editSid" name="Sid" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editMname">Mname</label>
+                                <input type="text" class="form-control" id="editMname" name="Mname" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editNumber">Number</label>
+                                <input type="text" class="form-control" id="editNumber" name="Number" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editTime">Time</label>
+                                <input type="text" class="form-control" id="editTime" name="Time" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editPrice">Price</label>
+                                <input type="text" class="form-control" id="editPrice" name="Price" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editProvince">Province</label>
+                                <input type="text" class="form-control" id="editProvince" name="Province" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editCity">City</label>
+                                <input type="text" class="form-control" id="editCity" name="City" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editDistrict">District</label>
+                                <input type="text" class="form-control" id="editDistrict" name="District" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="editDetailedAddress">DetailedAddress</label>
+                                <input type="text" class="form-control" id="editDetailedAddress" name="DetailedAddress" readonly />
+                            </div>
+
+                            <button type="submit" class="layui-btn" id="saveChangesButton">Confirm</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Aside -->
+    <aside class="bsb-sidebar-1 offcanvas offcanvas-start" tabindex="-1" id="bsbSidebar1" aria-labelledby="bsbSidebarLabel1">
+        <div class="offcanvas-header">
+            <a class="sidebar-brand" href="index">
+                <img src="~/images/Cust.png" id="bsbSidebarLabel1" class="bsb-tpl-logo" alt="Logo">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body pt-0">
+            <hr class="sidebar-divider mb-3">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link p-3 bg-light rounded active" data-bs-toggle="collapse" href="#dashboardExamples" role="button" aria-expanded="true" aria-controls="dashboardExamples">
+                        <div class="nav-link-icon text-primary">
+                            <i class="bi bi-grid"></i>
+                        </div>
+                        <span class="nav-link-text fw-bold">Drug Dashboards</span>
+                    </a>
+                    <div class="collapse show" id="dashboardExamples">
+                        <ul class="nav flex-column ms-4">
+                            <li class="nav-item">
+                                <a class="nav-link link-primary active" aria-current="page" href="index">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Drug market</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-3 bg-light rounded active" data-bs-toggle="collapse" href="#componentExamples" role="button" aria-expanded="true" aria-controls="componentExamples">
+                        <div class="nav-link-icon text-primary">
+                            <i class="bi bi-menu-button-wide-fill"></i>
+                        </div>
+                        <span class="nav-link-text fw-bold">Order Dashboards</span>
+                    </a>
+                    <div class="collapse" id="componentExamples">
+                        <ul class="nav flex-column ms-4">
+                            <li class="nav-item">
+                                <a class="nav-link link-primary active" aria-current="page" href="PendingP">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Pending payment</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-primary active" aria-current="page" href="PendingD">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Pending delivery</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-primary active" aria-current="page" href="Transitting">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Transitting delivery</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-primary active" aria-current="page" href="Received">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Received delivery</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+            <hr class="sidebar-divider my-4">
+        </div>
+    </aside>
+
+    <!-- Javascript Files: Vendors -->
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world-merc.js"></script>
+
+    <!-- Javascript Files: Controllers -->
+    <script src="~/assets/controller/console-analytics-bsb.js"></script>
+    <script src="~/assets/controller/chart-5.js"></script>
+    <script src="~/assets/controller/chart-6.js"></script>
+    <script src="~/assets/controller/chart-7.js"></script>
+    <script src="~/assets/controller/chart-8.js"></script>
+    <script src="~/assets/controller/chart-9.js"></script>
+    <script src="~/assets/controller/chart-10.js"></script>
+    <script src="~/assets/controller/map-3.js"></script>
+    <!-- BSB Body End -->
+
+    <script>
+        $(document).ready(function () {
+            // 全选/取消全选
+            $('#selectAll').change(function () {
+
+                $('.deleteCheckbox').prop('checked', $(this).prop('checked'));
+            });
+
+            // 删除选中项
+            $('#deleteSelected').click(function () {
+                var selectedIds = $('.deleteCheckbox:checked').map(function () {
+                    return $(this).data('id');
+                }).get();
+
+                if (selectedIds.length > 0) {
+                    $.post('@Url.Action("DeleteSelectedOrder", "Customer")', { ids: selectedIds }, function (result) {
+                        if (result.success) {
+                            // 刷新页面或更新数据列表
+                            location.reload();
+                        } else {
+                            alert('Error: ' + result.message);
+                        }
+                    });
+                } else {
+                    alert('Error: ' + result.message);
+                }
+            });
+            $('.editButton').on('click', function () {
+                // 获取按钮上的数据
+                
+                var oid = $(this).data('oid');
+                var cid = $(this).data('cid');
+                var mid = $(this).data('mid');
+                var sid = $(this).data('sid');
+                var mname = $(this).data('mname');
+                var number = $(this).data('number');
+                var time = $(this).data('time');
+                var price = $(this).data('price');
+                var province = $(this).data('province');
+                var city = $(this).data('city');
+                var district = $(this).data('district');
+                var detailedaddress = $(this).data('detailedaddress');
+                var state = $(this).data('state');
+                // 填充模态框中的表单
+                $('#editOid').val(oid);
+                $('#editCid').val(cid);
+                $('#editMid').val(mid);
+                $('#editSid').val(sid);
+                $('#editMname').val(mname);
+                $('#editNumber').val(number);
+                $('#editTime').val(time);
+                $('#editPrice').val(price);
+                $('#editProvince').val(province);
+                $('#editCity').val(city);
+                $('#editDistrict').val(district);
+                $('#editDetailedAddress').val(detailedaddress);
+
+                // 显示模态框
+                $('#editModal').modal('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

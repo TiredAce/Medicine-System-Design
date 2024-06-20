@@ -1,0 +1,453 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MVC_Test.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MVC_Test.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\bs-form-validation.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\bs-form-validation.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\calendar-1.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\calendar-1.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-1.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-1.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-10.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-10.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-2.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-2.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-3.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-3.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-4.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-4.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-5.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-5.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-6.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-6.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-7.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-7.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-8.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-8.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\chart-9.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\chart-9.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\console-analytics-bsb.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\console-analytics-bsb.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\console-bsb.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\console-bsb.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\editor-1.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\editor-1.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\editor-2.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\editor-2.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\map-1.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\map-1.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\map-2.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\map-2.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\controller\\map-3.js",
+      "PackagePath": "staticwebassets\\assets\\controller\\map-3.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\css\\console-analytics-bsb.css",
+      "PackagePath": "staticwebassets\\assets\\css\\console-analytics-bsb.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\css\\console-bsb.asset.php",
+      "PackagePath": "staticwebassets\\assets\\css\\console-bsb.asset.php"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\css\\console-bsb.css",
+      "PackagePath": "staticwebassets\\assets\\css\\console-bsb.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\css\\console-bsb.js",
+      "PackagePath": "staticwebassets\\assets\\css\\console-bsb.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\favicon\\favicon-512x512.png",
+      "PackagePath": "staticwebassets\\assets\\favicon\\favicon-512x512.png"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\branding\\adminT.png",
+      "PackagePath": "staticwebassets\\assets\\img\\branding\\adminT.png"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\branding\\console-logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\branding\\console-logo.png"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\branding\\console-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\branding\\console-logo.svg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\card\\card-img-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\card\\card-img-1.jpg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\chat\\chat-img-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\chat\\chat-img-1.jpg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\chat\\chat-img-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\chat\\chat-img-2.jpg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\profile\\profile-img-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\profile\\profile-img-1.jpg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\translation\\flag-img-1.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\translation\\flag-img-1.svg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\translation\\flag-img-2.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\translation\\flag-img-2.svg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\translation\\flag-img-3.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\translation\\flag-img-3.svg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\assets\\img\\translation\\flag-img-4.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\translation\\flag-img-4.svg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\css\\login_style.css",
+      "PackagePath": "staticwebassets\\css\\login_style.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\images\\Cust.png",
+      "PackagePath": "staticwebassets\\images\\Cust.png"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\images\\Supplier.png",
+      "PackagePath": "staticwebassets\\images\\Supplier.png"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\images\\admin.png",
+      "PackagePath": "staticwebassets\\images\\admin.png"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\images\\bg.jpg",
+      "PackagePath": "staticwebassets\\images\\bg.jpg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\layui\\css\\layui.css",
+      "PackagePath": "staticwebassets\\lib\\layui\\css\\layui.css"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\layui\\font\\iconfont.eot",
+      "PackagePath": "staticwebassets\\lib\\layui\\font\\iconfont.eot"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\layui\\font\\iconfont.svg",
+      "PackagePath": "staticwebassets\\lib\\layui\\font\\iconfont.svg"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\layui\\font\\iconfont.ttf",
+      "PackagePath": "staticwebassets\\lib\\layui\\font\\iconfont.ttf"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\layui\\font\\iconfont.woff",
+      "PackagePath": "staticwebassets\\lib\\layui\\font\\iconfont.woff"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\layui\\font\\iconfont.woff2",
+      "PackagePath": "staticwebassets\\lib\\layui\\font\\iconfont.woff2"
+    },
+    {
+      "Id": "E:\\Studyspace\\CS\\Web\\MVC_Test\\wwwroot\\lib\\layui\\layui.js",
+      "PackagePath": "staticwebassets\\lib\\layui\\layui.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MVC_Test.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MVC_Test.props",
+      "PackagePath": "build\\MVC_Test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MVC_Test.props",
+      "PackagePath": "buildMultiTargeting\\MVC_Test.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MVC_Test.props",
+      "PackagePath": "buildTransitive\\MVC_Test.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

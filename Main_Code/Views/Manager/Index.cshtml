@@ -1,0 +1,665 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Order Statistics";
+    var orderCnt = ViewBag.OrderCnt;
+    var orderSum = ViewBag.OrderSum;
+    var unPay = ViewBag.UnPay;
+    var unDeliver = ViewBag.UnDeliver;
+    var delivered = ViewBag.Delivered;
+    var received = ViewBag.Received;
+    var AgeGroup0_18Count = ViewBag.AgeGroup0_18Count;
+    var AgeGroup19_30Count = ViewBag.AgeGroup19_30Count;
+    var AgeGroup31_45Count = ViewBag.AgeGroup31_45Count;
+    var AgeGroup46_60Count = ViewBag.AgeGroup46_60Count;
+    var AgeGroup61PlusCount = ViewBag.AgeGroup61PlusCount;
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Document Title, Description, and Author -->
+  <title>Console - Free Bootstrap Admin Template</title>
+  <meta name="description" content="Console is a Free Bootstrap Admin Template.">
+
+  <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/png" sizes="512x512" href="~/assets/favicon/favicon-512x512.png">
+
+  <!-- Google Fonts Files -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="~/assets/css/console-analytics-bsb.css">
+
+
+  <!-- BSB Head -->
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="bg-white border-bottom border-light-subtle sticky-top bsb-tpl-header-sticky">
+    <nav class="navbar navbar-expand-md bsb-navbar-3 bsb-tpl-navbar-sticky" data-bsb-sticky-target="#header">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item me-3">
+            <a class="nav-link" href="#!" data-bs-toggle="offcanvas" data-bs-target="#bsbSidebar1" aria-controls="bsbSidebar1">
+              <i class="bi-filter-left fs-3 lh-1"></i>
+            </a>
+          </li>
+        </ul>
+        <a class="navbar-brand" href="index">
+          <img src="~/assets/img/branding/adminT.png" class="bsb-tpl-logo" alt="Logo">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#bsbNavbar" aria-controls="bsbNavbar" aria-label="Toggle Navigation">
+          <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="bsbNavbar">
+          <ul class="navbar-nav bsb-dropdown-menu-responsive ms-auto align-items-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="position-relative">
+                  <i class="bi bi-search"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-md-end bsb-dropdown-animation bsb-fadeIn">
+                <form class="row g-1 px-3 py-2 align-items-center">
+                  <div class="col-8">
+                    <label class="visually-hidden" for="inputSearchNavbar">Search</label>
+                    <input type="text" class="form-control" id="inputSearchNavbar">
+                  </div>
+                  <div class="col-4">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="position-relative">
+                  <i class="bi bi-globe"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-md-end bsb-dropdown-sm bsb-dropdown-animation bsb-fadeIn">
+                <div>
+                  <h6 class="dropdown-header fs-7 text-center">Multilingual</h6>
+                </div>
+                <div>
+                  <hr class="dropdown-divider mb-0">
+                </div>
+                <div class="list-group list-group-flush">
+                  <a href="#!" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <img src="~/assets/img/translation/flag-img-1.svg" class="img-fluid rounded-pill" alt="Arabic">
+                      </div>
+                      <div class="col-10">
+                        <div class="ps-3">
+                          <div class="fs-7">Arabic</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#!" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                                                <img src="~/assets/img/translation/flag-img-2.svg" class="img-fluid rounded-pill" alt="Chinese">
+                      </div>
+                      <div class="col-10">
+                        <div class="ps-3">
+                          <div class="fs-7">Chinese</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#!" class="list-group-item list-group-item-action active" aria-current="true">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <img src="~/assets/img/translation/flag-img-3.svg" class="img-fluid rounded-pill" alt="English">
+                      </div>
+                      <div class="col-10">
+                        <div class="ps-3">
+                          <div class="fs-7">English</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#!" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <img src="~/assets/img/translation/flag-img-4.svg" class="img-fluid rounded-pill" alt="French">
+                      </div>
+                      <div class="col-10">
+                        <div class="ps-3">
+                          <div class="fs-7">French</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <hr class="dropdown-divider mt-0">
+                </div>
+                <div>
+                  <a class="dropdown-item fs-7 text-center" href="#!">See All Languages</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="position-relative pt-1">
+                  <i class="bi bi-chat-left"></i>
+                </span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-md-end bsb-dropdown-animation bsb-fadeIn">
+                <div>
+                  <h6 class="dropdown-header fs-7 text-center">9 New Messages</h6>
+                </div>
+                <div>
+                  <hr class="dropdown-divider mb-0">
+                </div>
+                <div class="list-group list-group-flush">
+                  <a href="#!" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <img src="~/assets/img/chat/chat-img-1.jpg" class="img-fluid rounded-circle" alt="Luna John">
+                      </div>
+                      <div class="col-10">
+                        <div class="ps-3">
+                          <div class="text-dark">Luna John</div>
+                          <div class="text-secondary mt-1 fs-7">Hello, I'm having trouble with my account.</div>
+                          <div class="text-secondary mt-1 fs-7">15m ago</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#!" class="list-group-item list-group-item-action">
+                    <div class="row g-0 align-items-center">
+                      <div class="col-2">
+                        <img src="~/assets/img/chat/chat-img-2.jpg" class="img-fluid rounded-circle" alt="Mark Smith">
+                      </div>
+                      <div class="col-10">
+                        <div class="ps-3">
+                          <div class="text-dark">Mark Smith</div>
+                          <div class="text-secondary mt-1 fs-7">Hi, I'm not able to change my password.</div>
+                          <div class="text-secondary mt-1 fs-7">23m ago</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <hr class="dropdown-divider mt-0">
+                </div>
+                <div>
+                  <a class="dropdown-item fs-7 text-center" href="#!">See All Messages</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="position-relative pt-1">
+                  <i class="bi bi-bell"></i>
+                  <span class="p-1 bg-accent border border-light rounded-circle position-absolute top-0 start-100 translate-middle">
+                    <span class="visually-hidden">New Notifications</span>
+                  </span>
+                </span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-md-end bsb-dropdown-animation bsb-fadeIn">
+                <li>
+                  <h6 class="dropdown-header fs-7 text-center">18 Notifications</h6>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" href="#!">
+                    <span>
+                      <i class="bi bi-envelope-fill me-2"></i>
+                      <span class="fs-7">New Messages</span>
+                    </span>
+                    <span class="fs-7 ms-auto text-secondary">5 mins</span>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" href="#!">
+                    <span>
+                      <i class="bi bi-person-fill me-2"></i>
+                      <span class="fs-7">Friend Requests</span>
+                    </span>
+                    <span class="fs-7 ms-auto text-secondary">17 hours</span>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center" href="#!">
+                    <span>
+                      <i class="bi bi-file-earmark-fill me-2"></i>
+                      <span class="fs-7">New Reports</span>
+                    </span>
+                    <span class="fs-7 ms-auto text-secondary">3 days</span>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item fs-7 text-center" href="#!">See All Notifications</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="~/assets/img/profile/profile-img-1.jpg" width="35" height="35" class="img-fluid rounded-circle" alt="Ethan Leo">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-md-end bsb-dropdown-animation bsb-fadeIn">
+                <li>
+                  <h6 class="dropdown-header fs-7 text-center">Welcome, admin</h6>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item text-center" href="/Account/Login">
+                    <span>
+                      <span class="fs-7">Log Out</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main id="main">
+
+       
+
+    <!-- Section - Bootstrap Brain Component -->
+    <!-- Breadcrumb -->
+    <section class="py-3 py-md-4 py-xl-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="h4">Analytics Dashboard</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb m-0 fs-7">
+                <li class="breadcrumb-item"><a class="link-primary text-decoration-none" href="index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+
+        <section class="pb-3 pb-md-4 pb-xl-5 bg-light">
+            <div class="container">
+                <div class="row gy-3 gy-md-4">
+                    <div class="col-10 col-xl-5">
+                        <!-- Chart 5 - Bootstrap Brain Component -->
+                        <div class="card widget-card border-light shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-block d-sm-flex align-items-center justify-content-between mb-3">
+                                    <div class="mb-3 mb-sm-0">
+                                        <h5 class="card-title widget-card-title">Express Statistics</h5>
+                                    </div>
+                                </div>
+                                <canvas id="orderStatusChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-14 col-xl-7">
+                        <!-- Card 3 - Bootstrap Brain Component -->
+                        <div class="card widget-card border-light shadow-sm bg-primary h-100">
+                            <div class="card-body p-4">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-6">
+                                        <h5 class="card-title widget-card-title text-white mb-1">Express Statistics</h5>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center justify-content-end">
+                                        <span class="fs-1 bsb-w-85 bsb-h-85 text-white border border-3 border-primary-subtle rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-stars bsb-rotate-45"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="card mt-5 border-0">
+                                    <div class="card-body">
+                                        <div class="row gy-4">
+                                            <div class="col-12">
+                                                <div class="d-block d-sm-flex align-items-center justify-content-between mb-3">
+                                                </div>
+                                                <canvas id="ageDistributionChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-3 pb-md-4 pb-xl-8 bg-light">
+            <div class="container">
+                <div class="row gy-3 gy-md-4">
+                    <div class="col-12 col-xl-12">
+                        <div class="card widget-card border-light shadow-sm bg-primary h-100">
+                            <div class="card-body p-4">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-6">
+                                        <h5 class="card-title widget-card-title text-white mb-1">Medicine Statistics</h5>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center justify-content-end">
+                                        <span class="fs-1 bsb-w-85 bsb-h-85 text-white border border-3 border-primary-subtle rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-stars bsb-rotate-45"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="card mt-5 border-0">
+                                    <div class="card-body">
+                                        <div class="row gy-4">
+                                            <div class="col-12">
+                                                <div class="d-block d-sm-flex align-items-center justify-content-between mb-3">
+                                                </div>
+                                                <canvas id="salesChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var ctx = document.getElementById('orderStatusChart').getContext('2d');
+                var chartData = {
+                    labels: ['Pending payment', 'Pending delivery', 'Transitting delivery', 'Received delivery'],
+                    datasets: [{
+                        label: 'Order Status',
+                        data: [@unPay, @unDeliver, @delivered, @received],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                };
+
+                var orderStatusChart = new Chart(ctx, {
+                    type: 'pie', // Use 'bar' for bar chart
+                    data: chartData,
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (tooltipItem) {
+                                        return chartData.labels[tooltipItem.dataIndex] + ': ' + chartData.datasets[0].data[tooltipItem.dataIndex];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var ctx = document.getElementById('ageDistributionChart').getContext('2d');
+                var chartData = {
+                    labels: ['0-18', '19-30', '31-45', '46-60', '61+'],
+                    datasets: [{
+                        label: 'Number of Customers',
+                        data: [@AgeGroup0_18Count, @AgeGroup19_30Count, @AgeGroup31_45Count, @AgeGroup46_60Count, @AgeGroup61PlusCount],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                };
+
+                        var ageDistributionChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: chartData,
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function (tooltipItem) {
+                                            return chartData.labels[tooltipItem.dataIndex] + ': ' + chartData.datasets[0].data[tooltipItem.dataIndex];
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+            });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var ctx = document.getElementById('salesChart').getContext('2d');
+
+                var labels = [];
+                var data = [];
+
+                var topMedicines = @Html.Raw(Json.Serialize(Model));
+                console.log(topMedicines);
+                topMedicines.forEach(function (medicine) {
+                    labels.push(medicine.sname);
+                    data.push(medicine.totalSales);
+                });
+
+                var salesChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Sales Quantity',
+                            data: data,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 3, // 增加线条宽度
+                            pointRadius: 5, // 增加点的半径
+                            pointBackgroundColor: 'rgba(75, 192, 192, 1)', // 设置点的背景颜色
+                            fill: true // 填充背景
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Top Medicine Sales'
+                            },
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Medicines'
+                                }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Sales Quantity'
+                                }
+                            }
+                        },
+                        animation: {
+                            duration: 1000,
+                            easing: 'easeInOutBounce'
+                        }
+                    }
+                });
+            });
+        </script>
+
+
+  </main>
+
+  <!-- Aside -->
+  <aside class="bsb-sidebar-1 offcanvas offcanvas-start" tabindex="-1" id="bsbSidebar1" aria-labelledby="bsbSidebarLabel1">
+    <div class="offcanvas-header">
+      <a class="sidebar-brand" href="index">
+        <img src="~/assets/img/branding/AdminT.png" id="bsbSidebarLabel1" class="bsb-tpl-logo" alt="Logo">
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pt-0">
+      <hr class="sidebar-divider mb-3">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link p-3 bg-light rounded active" data-bs-toggle="collapse" href="#dashboardExamples" role="button" aria-expanded="true" aria-controls="dashboardExamples">
+            <div class="nav-link-icon text-primary">
+              <i class="bi bi-grid"></i>
+            </div>
+            <span class="nav-link-text fw-bold">Dashboards</span>
+          </a>
+          <div class="collapse show" id="dashboardExamples">
+            <ul class="nav flex-column ms-4">
+              <li class="nav-item">
+                <a class="nav-link link-primary active" aria-current="page" href="index">
+                  <div class="nav-link-icon text-primary-emphasis">
+                    <i class="bi bi-arrow-right-short"></i>
+                  </div>
+                  <span class="nav-link-text">Analytics</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item mt-3">
+                    <h6 class="py-1 text-secondary text-uppercase fs-7">Management tools</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link p-3 bg-light rounded active" data-bs-toggle="collapse" href="#componentExamples" role="button" aria-expanded="true" aria-controls="componentExamples">
+            <div class="nav-link-icon text-primary">
+              <i class="bi bi-menu-button-wide-fill"></i>
+            </div>
+            <span class="nav-link-text fw-bold">Components</span>
+          </a>
+          <div class="collapse" id="componentExamples">
+            <ul class="nav flex-column ms-4">
+              <li class="nav-item">
+                                <a class="nav-link link-secondary" aria-current="page" href="Supplier_Information">
+                  <div class="nav-link-icon text-primary-emphasis">
+                    <i class="bi bi-arrow-right-short"></i>
+                  </div>
+                                    <span class="nav-link-text">Supplier Information</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                                <a class="nav-link link-secondary" aria-current="page" href="Import_Supplier_Information">
+                  <div class="nav-link-icon text-primary-emphasis">
+                    <i class="bi bi-arrow-right-short"></i>
+                  </div>
+                                    <span class="nav-link-text">Import Supplier Information</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                                <a class="nav-link link-secondary" aria-current="page" href="Customer_Information">
+                  <div class="nav-link-icon text-primary-emphasis">
+                    <i class="bi bi-arrow-right-short"></i>
+                  </div>
+                  <span class="nav-link-text">Customer Information</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                                <a class="nav-link link-secondary" aria-current="page" href="Import_Customer_Information">
+                  <div class="nav-link-icon text-primary-emphasis">
+                    <i class="bi bi-arrow-right-short"></i>
+                  </div>
+                                    <span class="nav-link-text">Import Customer Information</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        
+      </ul>
+      <hr class="sidebar-divider my-4">
+    </div>
+  </aside>
+
+  <!-- Javascript Files: Vendors -->
+  <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world-merc.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Javascript Files: Controllers -->
+  <script src="~/assets/controller/console-analytics-bsb.js"></script>
+  <script src="~/assets/controller/chart-5.js"></script>
+  <script src="~/assets/controller/chart-6.js"></script>
+  <script src="~/assets/controller/chart-7.js"></script>
+  <script src="~/assets/controller/chart-8.js"></script>
+  <script src="~/assets/controller/chart-9.js"></script>
+  <script src="~/assets/controller/chart-10.js"></script>
+  <script src="~/assets/controller/map-3.js"></script>
+  <!-- BSB Body End -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+
+</body>
+
+</html>

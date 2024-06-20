@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Helloworld\**" />
+    <Compile Remove="wwwroot\新文件夹1\**" />
+    <Compile Remove="wwwroot\新文件夹2\**" />
+    <Content Remove="Views\Helloworld\**" />
+    <Content Remove="wwwroot\新文件夹1\**" />
+    <Content Remove="wwwroot\新文件夹2\**" />
+    <EmbeddedResource Remove="Views\Helloworld\**" />
+    <EmbeddedResource Remove="wwwroot\新文件夹1\**" />
+    <EmbeddedResource Remove="wwwroot\新文件夹2\**" />
+    <None Remove="Views\Helloworld\**" />
+    <None Remove="wwwroot\新文件夹1\**" />
+    <None Remove="wwwroot\新文件夹2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\HelloworldController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\controller\bs-form-validation.js" />
+    <None Include="wwwroot\assets\controller\calendar-1.js" />
+    <None Include="wwwroot\assets\controller\chart-1.js" />
+    <None Include="wwwroot\assets\controller\chart-10.js" />
+    <None Include="wwwroot\assets\controller\chart-2.js" />
+    <None Include="wwwroot\assets\controller\chart-3.js" />
+    <None Include="wwwroot\assets\controller\chart-4.js" />
+    <None Include="wwwroot\assets\controller\chart-5.js" />
+    <None Include="wwwroot\assets\controller\chart-6.js" />
+    <None Include="wwwroot\assets\controller\chart-7.js" />
+    <None Include="wwwroot\assets\controller\chart-8.js" />
+    <None Include="wwwroot\assets\controller\chart-9.js" />
+    <None Include="wwwroot\assets\controller\console-analytics-bsb.js" />
+    <None Include="wwwroot\assets\controller\console-bsb.js" />
+    <None Include="wwwroot\assets\controller\editor-1.js" />
+    <None Include="wwwroot\assets\controller\editor-2.js" />
+    <None Include="wwwroot\assets\controller\map-1.js" />
+    <None Include="wwwroot\assets\controller\map-2.js" />
+    <None Include="wwwroot\assets\controller\map-3.js" />
+    <None Include="wwwroot\assets\css\console-bsb.asset.php" />
+    <None Include="wwwroot\assets\css\console-bsb.js" />
+    <None Include="wwwroot\assets\img\branding\console-logo.svg" />
+    <None Include="wwwroot\assets\img\translation\flag-img-1.svg" />
+    <None Include="wwwroot\assets\img\translation\flag-img-2.svg" />
+    <None Include="wwwroot\assets\img\translation\flag-img-3.svg" />
+    <None Include="wwwroot\assets\img\translation\flag-img-4.svg" />
+    <None Include="wwwroot\lib\layui\font\iconfont.svg" />
+    <None Include="wwwroot\lib\layui\font\iconfont.woff2" />
+    <None Include="wwwroot\lib\layui\layui.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Alipay.AopSdk.Core" Version="2.5.0.1" />
+    <PackageReference Include="EPPlus" Version="7.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+  </ItemGroup>
+
+</Project>

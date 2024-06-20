@@ -1,0 +1,724 @@
+﻿@{
+    ViewData["Title"] = "Manager";
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Document Title, Description, and Author -->
+    <title>Console - Free Bootstrap Admin Template</title>
+    <meta name="description" content="Console is a Free Bootstrap Admin Template.">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/png" sizes="512x512" href="~/assets/favicon/favicon-512x512.png">
+
+    <!-- Google Fonts Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="~/assets/css/console-analytics-bsb.css">
+    <link href="/lib/layui/css/layui.css" rel="stylesheet">
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <!-- BSB Head -->
+    <style>
+
+        .card {
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .table-responsive {
+            margin-top: 20px;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: #ffffff;
+        }
+
+            .table th,
+            .table td {
+                padding: 0.75rem;
+                vertical-align: top;
+                border-top: 1px solid #dee2e6;
+            }
+
+            .table thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid #dee2e6;
+                background-color: #f2f2f2;
+            }
+
+            .table tbody + tbody {
+                border-top: 2px solid #dee2e6;
+            }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .table-bordered {
+            border: 1px solid #dee2e6;
+        }
+
+            .table-bordered th,
+            .table-bordered td {
+                border: 1px solid #dee2e6;
+            }
+
+            .table-bordered thead th,
+            .table-bordered thead td {
+                border-bottom-width: 2px;
+            }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="bg-white border-bottom border-light-subtle sticky-top bsb-tpl-header-sticky">
+        <nav class="navbar navbar-expand-md bsb-navbar-3 bsb-tpl-navbar-sticky" data-bsb-sticky-target="#header">
+            <div class="container">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#!" data-bs-toggle="offcanvas" data-bs-target="#bsbSidebar1" aria-controls="bsbSidebar1">
+                            <i class="bi-filter-left fs-3 lh-1"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="index">
+                    <img src="~/assets/img/branding/AdminT.png" class="bsb-tpl-logo" alt="Logo">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#bsbNavbar" aria-controls="bsbNavbar" aria-label="Toggle Navigation">
+                    <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="bsbNavbar">
+                    <ul class="navbar-nav bsb-dropdown-menu-responsive ms-auto align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="position-relative">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-md-end bsb-dropdown-animation bsb-fadeIn">
+                                <form class="row g-1 px-3 py-2 align-items-center" method="POST" action="@Url.Action("search", "Manager")">
+                                    <div class="col-8">
+                                        <label class="visually-hidden" for="inputSearchNavbar" name="searchText">Search</label>
+                                        <input type="text" name="searchText" value="" placeholder="Integrated Query" lay-affix="clear" class="form-control" id="inputSearchNavbar">
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+
+                                    @* <div class="layui-col-md4">
+                                        <div class="layui-input-wrap">
+                                            <input type="text" name="searchText" value="" placeholder="Integrated Query" class="layui-input" lay-affix="clear">
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-md4">
+                                        <button class="layui-btn" type="submit" lay-submit lay-filter="search">Search</button>
+                                    </div> *@
+                                </form>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="position-relative">
+                                    <i class="bi bi-globe"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-md-end bsb-dropdown-sm bsb-dropdown-animation bsb-fadeIn">
+                                <div>
+                                    <h6 class="dropdown-header fs-7 text-center">Multilingual</h6>
+                                </div>
+                                <div>
+                                    <hr class="dropdown-divider mb-0">
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <a href="#!" class="list-group-item list-group-item-action" aria-current="true">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <img src="~/assets/img/translation/flag-img-1.svg" class="img-fluid rounded-pill" alt="Arabic">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="ps-3">
+                                                    <div class="fs-7">Arabic</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#!" class="list-group-item list-group-item-action" aria-current="true">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <img src="~/assets/img/translation/flag-img-2.svg" class="img-fluid rounded-pill" alt="Chinese">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="ps-3">
+                                                    <div class="fs-7">Chinese</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#!" class="list-group-item list-group-item-action active" aria-current="true">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <img src="~/assets/img/translation/flag-img-3.svg" class="img-fluid rounded-pill" alt="English">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="ps-3">
+                                                    <div class="fs-7">English</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#!" class="list-group-item list-group-item-action" aria-current="true">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <img src="~/assets/img/translation/flag-img-4.svg" class="img-fluid rounded-pill" alt="French">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="ps-3">
+                                                    <div class="fs-7">French</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <hr class="dropdown-divider mt-0">
+                                </div>
+                                <div>
+                                    <a class="dropdown-item fs-7 text-center" href="#!">See All Languages</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="position-relative pt-1">
+                                    <i class="bi bi-chat-left"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-md-end bsb-dropdown-animation bsb-fadeIn">
+                                <div>
+                                    <h6 class="dropdown-header fs-7 text-center">9 New Messages</h6>
+                                </div>
+                                <div>
+                                    <hr class="dropdown-divider mb-0">
+                                </div>
+                                <div class="list-group list-group-flush">
+                                    <a href="#!" class="list-group-item list-group-item-action" aria-current="true">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <img src="~/assets/img/chat/chat-img-1.jpg" class="img-fluid rounded-circle" alt="Luna John">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="ps-3">
+                                                    <div class="text-dark">Luna John</div>
+                                                    <div class="text-secondary mt-1 fs-7">Hello, I'm having trouble with my account.</div>
+                                                    <div class="text-secondary mt-1 fs-7">15m ago</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#!" class="list-group-item list-group-item-action">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <img src="~/assets/img/chat/chat-img-2.jpg" class="img-fluid rounded-circle" alt="Mark Smith">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="ps-3">
+                                                    <div class="text-dark">Mark Smith</div>
+                                                    <div class="text-secondary mt-1 fs-7">Hi, I'm not able to change my password.</div>
+                                                    <div class="text-secondary mt-1 fs-7">23m ago</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <hr class="dropdown-divider mt-0">
+                                </div>
+                                <div>
+                                    <a class="dropdown-item fs-7 text-center" href="#!">See All Messages</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="position-relative pt-1">
+                                    <i class="bi bi-bell"></i>
+                                    <span class="p-1 bg-accent border border-light rounded-circle position-absolute top-0 start-100 translate-middle">
+                                        <span class="visually-hidden">New Notifications</span>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-md-end bsb-dropdown-animation bsb-fadeIn">
+                                <li>
+                                    <h6 class="dropdown-header fs-7 text-center">18 Notifications</h6>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#!">
+                                        <span>
+                                            <i class="bi bi-envelope-fill me-2"></i>
+                                            <span class="fs-7">New Messages</span>
+                                        </span>
+                                        <span class="fs-7 ms-auto text-secondary">5 mins</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#!">
+                                        <span>
+                                            <i class="bi bi-person-fill me-2"></i>
+                                            <span class="fs-7">Friend Requests</span>
+                                        </span>
+                                        <span class="fs-7 ms-auto text-secondary">17 hours</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center" href="#!">
+                                        <span>
+                                            <i class="bi bi-file-earmark-fill me-2"></i>
+                                            <span class="fs-7">New Reports</span>
+                                        </span>
+                                        <span class="fs-7 ms-auto text-secondary">3 days</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item fs-7 text-center" href="#!">See All Notifications</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bsb-dropdown-toggle-caret-disable" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="~/assets/img/profile/profile-img-1.jpg" width="35" height="35" class="img-fluid rounded-circle" alt="Ethan Leo">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-md-end bsb-dropdown-animation bsb-fadeIn">
+                                <li>
+                                    <h6 class="dropdown-header fs-7 text-center">Welcome, admin</h6>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-center" href="/Account/Login">
+                                        <span>
+                                            <span class="fs-7">Log Out</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="main">
+
+        <!-- Section - Bootstrap Brain Component -->
+        <!-- Breadcrumb -->
+        <section class="py-3 py-md-4 py-xl-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="h4">Customer Information Management</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0 fs-7">
+                                <li class="breadcrumb-item"><a class="link-primary text-decoration-none" href="index">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Components</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 16px;" class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <form class="container" method="POST" action="@Url.Action("search", "Manager")">
+                            <div class="layui-col-md4">
+                                <div class="layui-input-wrap">
+                                    <input type="text" name="searchText" value="" placeholder="Integrated Query" class="layui-input" lay-affix="clear">
+                                </div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <button class="layui-btn" type="submit" lay-submit lay-filter="search">Search</button>
+                            </div>
+                        </form>
+                        <button id="deleteSelected" class="layui-btn">Delete Customer</button>
+                      
+                   
+                            <button type="button" class="layui-btn" data-toggle="modal" data-target="#addCustomerModal">Add Customer</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模态框 -->
+            <div class="modal fade" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addCustomerModalLabel">Add Customer</h5>
+                        </div>
+                        <div class="modal-body">
+                            <!-- 表单用于填写数据 -->
+                            <form id="addCustomerForm">
+                                <!-- 表单字段 -->
+                                <div class="form-group">
+                                    <label for="Cid">Cid</label>
+                                    <input type="text" class="form-control" id="Cid" name="Cid" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Cname">Cname</label>
+                                    <input type="text" class="form-control" id="Cname" name="Cname" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Telephone">Telephone</label>
+                                    <input type="text" class="form-control" id="Telephone" name="Telephone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Age">Age</label>
+                                    <input type="number" class="form-control" id="Age" name="Age" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Province">Province</label>
+                                    <input type="text" class="form-control" id="Province" name="Province" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="City">City</label>
+                                    <input type="text" class="form-control" id="City" name="City" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="District">District</label>
+                                    <input type="text" class="form-control" id="District" name="District" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="DetailedAddress">Detailed Address</label>
+                                    <input type="text" class="form-control" id="DetailedAddress" name="DetailedAddress" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email">Email</label>
+                                    <input type="email" class="form-control" id="Email" name="Email" required>
+                                </div>
+                                <button type="button" class="layui-btn" id="saveCustomerButton">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <table id="zero_config" class="table table-striped table-bordered container">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll" /></th>
+                        <th>Cid</th>
+                        <th>Cname</th>
+                        <th>Telephone</th>
+                        <th>Age</th>
+                        <th>Province</th>
+                        <th>City</th>
+                        <th>District</th>
+                        <th>Detail Adress</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var customer in Model)
+                    {
+                        <tr>
+                            <td><input type="checkbox" class="deleteCheckbox" data-id="@customer.Cid" /></td>
+                            <td>@customer.Cid</td>
+                            <td>@customer.Cname</td>
+                            <td>@customer.Telephone</td>
+                            <td>@customer.Age</td>
+                            <td>@customer.Province</td>
+                            <td>@customer.City</td>
+                            <td>@customer.District</td>
+                            <td>@customer.DetailedAddress</td>
+                            <td>@customer.Email</td>
+                            <td><button class="btn btn-primary editButton" data-id="@customer.Cid" data-cname="@customer.Cname" data-telephone="@customer.Telephone" data-age="@customer.Age" data-province="@customer.Province" data-city="@customer.City" data-district="@customer.District" data-detailedaddress="@customer.DetailedAddress" data-email="@customer.Email">Edit</button></td>
+
+                        </tr>
+                    }
+                </tbody>
+
+
+            </table>
+
+        </section>
+
+        <!-- Edit Modal -->
+        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel">Edit Customer</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editForm">
+                            <input type="hidden" id="editCid" name="Cid" />
+                            <div class="form-group">
+                                <label for="editCname">Cname</label>
+                                <input type="text" class="form-control" id="editCname" name="Cname" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="editTelephone">Telephone</label>
+                                <input type="text" class="form-control" id="editTelephone" name="Telephone" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="editAge">Age</label>
+                                <input type="number" class="form-control" id="editAge" name="Age" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="editProvince">Province</label>
+                                <input type="text" class="form-control" id="editProvince" name="Province" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="editCity">City</label>
+                                <input type="text" class="form-control" id="editCity" name="City" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="editDistrict">District</label>
+                                <input type="text" class="form-control" id="editDistrict" name="District" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="editDetailedAddress">Detailed Address</label>
+                                <input type="text" class="form-control" id="editDetailedAddress" name="DetailedAddress" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="editEmail">Email</label>
+                                <input type="email" class="form-control" id="editEmail" name="Email" required />
+                            </div>
+                            <button type="button" class="layui-btn" id="saveChangesButton">Save changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Aside -->
+    <aside class="bsb-sidebar-1 offcanvas offcanvas-start" tabindex="-1" id="bsbSidebar1" aria-labelledby="bsbSidebarLabel1">
+        <div class="offcanvas-header">
+            <a class="sidebar-brand" href="index">
+                <img src="~/assets/img/branding/AdminT.png" id="bsbSidebarLabel1" class="bsb-tpl-logo" alt="Logo">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body pt-0">
+            <hr class="sidebar-divider mb-3">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link p-3 bg-light rounded active" data-bs-toggle="collapse" href="#dashboardExamples" role="button" aria-expanded="true" aria-controls="dashboardExamples">
+                        <div class="nav-link-icon text-primary">
+                            <i class="bi bi-grid"></i>
+                        </div>
+                        <span class="nav-link-text fw-bold">Dashboards</span>
+                    </a>
+                    <div class="collapse show" id="dashboardExamples">
+                        <ul class="nav flex-column ms-4">
+                            <li class="nav-item">
+                                <a class="nav-link link-primary active" aria-current="page" href="index">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Analytics</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item mt-3">
+                    <h6 class="py-1 text-secondary text-uppercase fs-7">Management tools</h6>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-3 bg-light rounded active" data-bs-toggle="collapse" href="#componentExamples" role="button" aria-expanded="true" aria-controls="componentExamples">
+                        <div class="nav-link-icon text-primary">
+                            <i class="bi bi-menu-button-wide-fill"></i>
+                        </div>
+                        <span class="nav-link-text fw-bold">Components</span>
+                    </a>
+                    <div class="collapse" id="componentExamples">
+                        <ul class="nav flex-column ms-4">
+                            <li class="nav-item">
+                                <a class="nav-link link-secondary" aria-current="page" href="Supplier_Information">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Supplier Information</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-secondary" aria-current="page" href="Import_Supplier_Information">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Import Supplier Information</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-secondary" aria-current="page" href="Customer_Information">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Customer Information</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-secondary" aria-current="page" href="Import_Customer_Information">
+                                    <div class="nav-link-icon text-primary-emphasis">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                    </div>
+                                    <span class="nav-link-text">Import Customer Information</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+            <hr class="sidebar-divider my-4">
+        </div>
+    </aside>
+
+
+    <!-- Javascript Files: Vendors -->
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world-merc.js"></script>
+
+    <!-- Javascript Files: Controllers -->
+    <script src="~/assets/controller/console-analytics-bsb.js"></script>
+    <script src="~/assets/controller/chart-5.js"></script>
+    <script src="~/assets/controller/chart-6.js"></script>
+    <script src="~/assets/controller/chart-7.js"></script>
+    <script src="~/assets/controller/chart-8.js"></script>
+    <script src="~/assets/controller/chart-9.js"></script>
+    <script src="~/assets/controller/chart-10.js"></script>
+    <script src="~/assets/controller/map-3.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // 全选/取消全选
+            $('#selectAll').change(function () {
+                
+                $('.deleteCheckbox').prop('checked', $(this).prop('checked'));
+            });
+
+            // 删除选中项
+            $('#deleteSelected').click(function () {
+                var selectedIds = $('.deleteCheckbox:checked').map(function () {
+                    return $(this).data('id');
+                }).get();
+
+                if (selectedIds.length > 0) {
+                    $.post('@Url.Action("DeleteSelected", "Manager")', { ids: selectedIds }, function (result) {
+                        if (result.success) {
+                            // 刷新页面或更新数据列表
+                            location.reload();
+                        } else {
+                            alert('Error: ' + result.message);
+                        }
+                    });
+                } else {
+                    alert('Error: ' + result.message);
+                }
+            });
+            $('.editButton').on('click', function () {
+               
+                var customer = $(this).data();
+                $('#editCid').val(customer.id);
+                $('#editCname').val(customer.cname);
+                $('#editTelephone').val(customer.telephone);
+                $('#editAge').val(customer.age);
+                $('#editProvince').val(customer.province);
+                $('#editCity').val(customer.city);
+                $('#editDistrict').val(customer.district);
+                $('#editDetailedAddress').val(customer.detailedaddress);
+                $('#editEmail').val(customer.email);
+                $('#editModal').modal('show');
+            });
+
+            $('#saveChangesButton').on('click', function () {
+                var formData = $('#editForm').serialize();
+                $.post('@Url.Action("UpdateCustomer", "Manager")', formData, function (result) {
+                    if (result.success) {
+                        location.reload(); // 成功后重新加载页面
+                    } else {
+                        alert('Error: ' + result.message);
+                    }
+                });
+            });
+            $('#saveCustomerButton').on('click', function () {
+                var formData = $('#addCustomerForm').serialize();
+                $.post('@Url.Action("AddCustomer", "Manager")', formData, function (result) {
+                    if (result.success) {
+                        location.reload(); // 成功后重新加载页面
+                    } else {
+                        alert('Error: ' + result.message);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+    <!-- BSB Body End -->
+</body>
+
+</html>
